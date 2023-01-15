@@ -1,0 +1,35 @@
+.header{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+font-weight: var(--fw-normal);
+font-size: var(--fs-36);
+line-height: 43px;
+
+color: var(--colors-text);
+}
+
+.logo span {
+ color: var(--primary);
+}
+
+.location{
+    display: flex;
+
+    color: var(--location);
+
+    align-items: center;
+}
+.locationText{
+    margin-right: 5px;
+    font-weight: var(--fw-normal);
+    font-size: var(--fs-12);
+    line-height: 14px;
+}
+.svg {
+    position: relative;
+    top: -2px;
+}

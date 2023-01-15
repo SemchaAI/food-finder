@@ -1,0 +1,11 @@
+.ModeSwitcher {
+  color: var(--colors-text);
+  font-size: var(--fs-12);
+  cursor: pointer;
+  font-weight: var(--fw-bold);
+  text-transform: capitalize;
+}
+
+.ModeSwitcher span {
+    margin-left: 0.75rem ;
+}

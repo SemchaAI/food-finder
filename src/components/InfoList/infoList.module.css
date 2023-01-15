@@ -1,0 +1,58 @@
+.infoList{
+    font-family: var(--family-popins);
+}
+
+
+img {
+    border-radius: 10px;
+}
+.title{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.time{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    color: var(--location);
+}
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.ingridients{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.ingridients li {
+    margin:3px 0px  0px 0px;
+    background:  url('../../assets/icon-bug.svg') no-repeat ;
+    line-height:  24px;
+    padding-left: 25px ;
+    vertical-align: middle;
+}
+.article{
+    margin-top: 10px;
+    column-width: 100%;
+    column-count: 1;
+
+}
+.instructions{
+    margin-top: 10px;
+}
+.instructions li {
+    margin-top: 10px;
+}
+
+
+ h4 {
+    color: var(--location);
+}
+span{
+    color: var(--primary);
+}

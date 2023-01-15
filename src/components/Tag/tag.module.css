@@ -1,0 +1,28 @@
+.tag{
+    background: var(--white);
+    /* Primary / Default */
+    padding: 2px 10px 2px 10px;
+
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    color: var(--primary);
+    width: max-content;
+
+    font-weight: var(--fw-normal);
+    font-size: var(--fs-14);
+    line-height: 22px;
+
+    margin-top: 10px;
+    gap: 5px;
+
+    display: flex;
+}
+.cheap{
+    color: var(--red);
+    border: 2px solid var(--red);
+}
+
+.popular , .glutenFree {
+    color: var(--location);
+    border: 2px solid var(--location);
+}
