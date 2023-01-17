@@ -67,6 +67,15 @@ const controlsSlice = createSlice({
       state.tag = action.payload;
     },
     setClear: () => initialState,
+    setClearInfo: (state, action) => {
+      state.info = {
+        ...initialState.info,
+        analyzedInstructions: [],
+        ingridients: [],
+        instructions: [],
+        uniqIngridients: [],
+      };
+    },
     setClearControls: (state, action) => {
       state.search = "";
       state.tag = "";
@@ -84,7 +93,6 @@ const controlsSlice = createSlice({
         state.error = null;
       })
       .addCase(loadByID.fulfilled, (state, action) => {
-        state.statusID = "received";
         const {
           image,
           title,
@@ -118,6 +126,7 @@ const controlsSlice = createSlice({
           uniqIngridients,
         };
         state.error = null;
+        state.statusID = "received";
       })
       .addMatcher(
         (action) => action.type.endsWith("/loading"),
@@ -138,8 +147,14 @@ const controlsSlice = createSlice({
   },
 });
 
-export const { setSearch, setTag, setClear, setClearControls } =
-  controlsSlice.actions;
+export const {
+  setSearch,
+  setTag,
+  setInfo,
+  setClear,
+  setClearInfo,
+  setClearControls,
+} = controlsSlice.actions;
 export const controlsReducer = controlsSlice.reducer;
 export const selectControls = (state) => state.controls;
 export const selectList = (state) => state.controls.list;

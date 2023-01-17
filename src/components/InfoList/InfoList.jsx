@@ -6,9 +6,11 @@ import { Tag } from "../Tag/Tag";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  setClear,
   loadByID,
   selectControls,
   selectInfo,
+  setClearInfo,
 } from "../../features/controls/controlsSlice";
 export const InfoList = () => {
   const location = useLocation();
@@ -24,6 +26,7 @@ export const InfoList = () => {
   useEffect(() => {
     console.log("eff");
     if (id !== info.id) {
+      dispatch(setClearInfo());
       dispatch(loadByID(id));
       console.log(info);
     }
