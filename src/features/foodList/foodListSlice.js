@@ -32,7 +32,18 @@ const foodListSlice = createSlice({
       .addCase(loadFoodList.fulfilled, (state, action) => {
         state.status = "received";
         const { recipes } = action.payload.data;
-        state.list = recipes;
+        const rec = recipes.map((el) => {
+          const data = {
+            id: el.id,
+            title: el.title,
+            image: el.image,
+            servings: el.servings,
+            readyInMinutes: el.readyInMinutes,
+          };
+          return data;
+        });
+        //console.log(rec);
+        state.list = rec;
         state.error = null;
       });
   },

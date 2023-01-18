@@ -95,6 +95,7 @@ export const Search = () => {
   useEffect(() => {
     console.log("useEff");
     console.log(search, tag);
+
     if (search === "" && tag === "") {
     } else {
       dispatch(loadSearchList({ search, tag }));
